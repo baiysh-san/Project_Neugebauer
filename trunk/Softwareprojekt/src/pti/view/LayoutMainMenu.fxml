@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1080.0" maxWidth="1920.0" minHeight="600.0" minWidth="1180.0" prefHeight="600.0" prefWidth="1180.0" style="-fx-background-color: #332211;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pti.view.ControllerMainMenu">
+   <children>
+      <ImageView fx:id="background" fitHeight="600.0" fitWidth="1180.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Hintergrund_1920x1080.png" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="1080.0" maxWidth="1920.0" minHeight="600.0" minWidth="1180.0" onMouseMoved="#checkScreenSize" prefHeight="600.0" prefWidth="1180.0" style="-fx-background-color: none;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane fx:id="ap" maxHeight="1080.0" maxWidth="1920.0" minHeight="557.0" minWidth="1080.0" prefHeight="557.0" prefWidth="1180.0" style="-fx-background-color: none;" stylesheets="style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TabPane fx:id="tp" maxHeight="1080.0" maxWidth="1920.0" minHeight="562.0" minWidth="1203.0" prefHeight="562.0" prefWidth="1203.0" style="-fx-border-color: white; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                           <tabs>
+                              <Tab text="Aufträge">
+                                 <content>
+                                    <AnchorPane fx:id="auftraege" maxHeight="1080.0" maxWidth="1920.0" minHeight="480.0" minWidth="1100.0">
+                                       <children>
+                                          <Pane fx:id="pane" layoutX="36.0" prefHeight="340.0" prefWidth="500.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="40.0">
+                                             <children>
+                                                <ImageView fx:id="transparencyOrder" fitHeight="337.0" fitWidth="227.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@Transparenz.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <TableView fx:id="orderTableView" prefHeight="338.0" prefWidth="229.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="orderIDColumn" maxWidth="220.0" minWidth="-1.0" prefWidth="220.0" resizable="false" style="-fx-background-color: none;" text="Aktuelle Aufträge" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="pane2" prefHeight="400.0" prefWidth="424.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                                             <children>
+                                                <ImageView fx:id="transparencyOrderData" fitHeight="229.0" fitWidth="383.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@Transparenz.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                                <GridPane fx:id="orderGp" prefHeight="129.0" prefWidth="360.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label style="-fx-font-size: 15;" text="Auftrag:" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="orderLabel" style="-fx-font-size: 15; -fx-font-family: none;" text="---" GridPane.columnIndex="2" />
+                                                      <Label style="-fx-font-size: 15;" text="Kunde:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label fx:id="customerLabel" style="-fx-font-size: 15; -fx-font-family: none;" text="---" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Label style="-fx-font-size: 15;" text="Beschreibung:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label fx:id="descriptionLabel" style="-fx-font-size: 15; -fx-font-family: none;" text="---" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Label fx:id="productLabel" text="---" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Label text="Produkt:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label text="Zeitplan:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Label fx:id="productionOrderLabel" text="---" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </Pane>
+                                          <Button mnemonicParsing="false" onAction="#handleDeleteOrder" style="-fx-font-size: 18;" text="Auftrag entfernen" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" />
+                                          <Button layoutX="230.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleNewOrder" style="-fx-font-size: 18;" text="Auftrag erstellen" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="260.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Produkte">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="1117.0">
+                                       <children>
+                                          <AnchorPane fx:id="productTab" prefHeight="451.0" prefWidth="1106.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Mitarbeiter">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane fx:id="employeeTab" prefHeight="491.0" prefWidth="1146.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Maschinen">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane fx:id="machineTab" prefHeight="491.0" prefWidth="1146.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gantt-Mitarbeiter">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane fx:id="ganttEmployeeTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gantt-Maschinen">
+                                 <content>
+                                    <AnchorPane fx:id="ganttMachineTab" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane style="-fx-background-color: none;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="37.0" prefWidth="1180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <MenuBar fx:id="menuBar" maxHeight="48.0" minHeight="35.0" prefHeight="40.0" prefWidth="1180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <menus>
+                              <Menu mnemonicParsing="false" text="Programm">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Schließen" />
+                                 </items>
+                              </Menu>
+                           </menus>
+                        </MenuBar>
+                        <ImageView fitHeight="35.0" fitWidth="353.0" pickOnBounds="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@Transparenz.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutY="-1.0" prefHeight="49.0" prefWidth="624.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="118.0" style="-fx-font-size: 18;" text="Angemeldet: ">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Label>
+                        <Label fx:id="loginNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="225.0" style="-fx-font-size: 18; -fx-font-family: none;" text="&quot;loginName&quot;">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></Label>
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="35.0" style="-fx-font-size: 18;" text="Abmelden" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin></Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="35.0" style="-fx-font-size: 18;" text="Beenden" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="558.0" prefWidth="491.0" style="-fx-background-color: #332211;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pti.view.ControllerNewOrder">
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="491.0" pickOnBounds="true">
+         <image>
+            <Image url="@Hintergrund.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="468.0" fitWidth="463.0" layoutX="34.0" layoutY="32.0" pickOnBounds="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+         <image>
+            <Image url="@Transparenz.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="394.0" layoutX="8.0" layoutY="12.0" pickOnBounds="true">
+         <image>
+            <Image url="@Transparenz.png" />
+         </image>
+      </ImageView>
+      <Label prefHeight="35.0" prefWidth="422.0" style="-fx-font-size: 24;" text="Hinzufügen eines neuen Auftrages:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <GridPane hgap="16.0" layoutX="16.0" layoutY="69.0" prefHeight="468.0" prefWidth="467.0" style="-fx-border-color: blue; -fx-border-width: 2;" vgap="16.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="69.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="175.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="219.0" prefWidth="221.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="87.0" minHeight="50.0" prefHeight="87.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="236.0" minHeight="53.0" prefHeight="88.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="217.0" minHeight="30.0" prefHeight="67.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.0" minHeight="30.0" prefHeight="73.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="89.0" minHeight="50.0" prefHeight="66.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="customerComboBox" prefHeight="25.0" prefWidth="228.0" GridPane.columnIndex="2" />
+            <TextArea fx:id="descriptionInput" prefHeight="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="productComboBox" prefWidth="150.0" />
+                  <TextField fx:id="amount" prefWidth="80.0" promptText="Anzahl" />
+               </children>
+            </HBox>
+            <DatePicker fx:id="datePicker" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="Kunde:" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" text="Beschreibung:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Produkt:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Lieferdatum:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleCancel" text="Abbrechen">
+                     <HBox.margin>
+                        <Insets left="50.0" top="22.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleCreate" text="Erstellen" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

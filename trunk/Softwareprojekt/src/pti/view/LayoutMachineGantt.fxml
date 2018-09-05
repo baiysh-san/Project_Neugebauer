@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="484.0" maxWidth="1136.0" minHeight="484.0" minWidth="1136.0" onMouseMoved="#checkScreenSize" prefHeight="484.0" prefWidth="1136.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pti.view.ControllerMachineGantt">
+   <children>
+      <MenuBar fx:id="mb" prefHeight="35.0" prefWidth="1136.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Bearbeiten">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Hinzufügen" />
+                  <MenuItem mnemonicParsing="false" text="Löschen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="ap" prefHeight="484.0" prefWidth="1136.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <ImageView fx:id="transparency" fitHeight="198.0" fitWidth="212.0" pickOnBounds="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <image>
+                  <Image url="@Transparenz.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="p" layoutX="893.0" layoutY="269.0" prefHeight="198.0" prefWidth="212.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="212.0" style="-fx-font-size: 18;" text="Legende:" />
+                  <GridPane fx:id="gp" layoutX="-2.0" layoutY="58.0" prefHeight="114.0" prefWidth="212.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label style="-fx-font-family: none;" text="verfügbar" GridPane.columnIndex="3" />
+                        <Label style="-fx-font-family: none;" text="arbeitet" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-family: none;" text="wartet" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <DatePicker fx:id="dateInput" layoutX="933.0" layoutY="206.0" prefHeight="37.0" prefWidth="171.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

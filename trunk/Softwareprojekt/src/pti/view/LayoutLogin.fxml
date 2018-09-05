@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="ap" minHeight="600.0" minWidth="1180.0" onMouseMoved="#checkScreenSize" prefHeight="600.0" prefWidth="1180.0" style="-fx-background-color: #332211;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pti.view.ControllerLogin">
+   <children>
+      <ImageView fx:id="background" fitHeight="600.0" fitWidth="1180.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Hintergrund_1920x1080.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logo" fitHeight="185.0" fitWidth="435.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="rightUp" maxHeight="1080.0" maxWidth="1920.0" prefHeight="487.0" prefWidth="587.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <ImageView fx:id="gif" fitHeight="466.0" fitWidth="419.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@Schreiner-60657.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="picture" fitHeight="393.0" fitWidth="509.0" layoutX="60.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Bild_Login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="leftDown" layoutX="20.0" maxHeight="1080.0" maxWidth="1920.0" prefHeight="295.0" prefWidth="597.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="25.0">
+         <children>
+            <ImageView fx:id="transparency" fitHeight="254.0" fitWidth="462.0" layoutX="47.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Transparenz.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="progressIndicator" layoutX="150.0" layoutY="50.0" prefHeight="200.0" prefWidth="217.0" progress="0.0" visible="false" />
+            <GridPane fx:id="gp" hgap="20.0" layoutX="47.0" layoutY="10.0" maxHeight="500.0" maxWidth="1000.0" prefHeight="235.0" prefWidth="462.0" vgap="30.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label style="-fx-font-size: 18;" text="Anmeldename:" />
+                  <TextField fx:id="loginInput" prefHeight="39.0" prefWidth="220.0" style="-fx-font-size: 18;" GridPane.columnIndex="1" />
+                  <Label style="-fx-font-size: 18;" text="Passwort: " GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordInput" style="-fx-font-size: 18;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLogin" style="-fx-font-size: 18;" text="Anmelden" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClose" style="-fx-font-size: 18;" text="Beenden" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="65.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
